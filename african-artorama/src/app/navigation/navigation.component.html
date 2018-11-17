@@ -1,0 +1,8 @@
+<nav class="row bg-primary">
+  <h2 class="col-6">{{title}}</h2>
+  <select [(ngModel)]="selectedSearchType">
+    <option *ngFor="let type of SearchTypes">{{type}}</option>
+  </select>
+  <input type="text" [(ngModel)]="input"/>
+  <button (click)="doSearch()">Search</button>
+</nav>
