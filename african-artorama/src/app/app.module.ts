@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { Navigation } from './navigation/navigation.component';
 import { ArtComponent } from './art/Art.component';
 
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { ArtComponent } from './art/Art.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
