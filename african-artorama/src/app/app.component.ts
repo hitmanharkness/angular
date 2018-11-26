@@ -11,15 +11,25 @@ export class AppComponent {
   title = 'african-artorama';
   private _art: ArtPiece[] = new ArtService().Art;
   art: ArtPiece[] = this._art;
+  searchParameters = { Name: '', Price: ''};
   handleSearch(input) {
-    let artCollection
-    if (input.SearchType == 'Name') {
-      artCollection = this._art.filter(a => a.Name.includes(input.Value));
+    this.searchParameters = {
+      ...this.searchParameters,
+      ...input
+    };
+
+    let artCollection = this._art;
+    if (this.searchParameters.Name !== '') {
+      artCollection = artCollection.filter(a => a.Name.includes(this.searchParameters.Name));
     }
-    else if (input.SearchType == 'Price') {
-      artCollection = this._art.filter(a => a.Price == input.Value);
+    if (this.searchParameters.Price !== '') {
+      switch (this.searchParameters.Price) {
+        case 'Under 25': artCollection = artCollection.filter(a => a.Price < 25); break;
+        case 'Between 25 and 50': artCollection = artCollection.filter(a => a.Price < 50 && a.Price >= 25); break;
+        case 'Between 50 and 75': artCollection = artCollection.filter(a => a.Price < 75 && a.Price >= 50); break;
+        case 'Over 75': artCollection = artCollection.filter(a => a.Price >= 75); break;
+      }
     }
-      
     this.art = artCollection;
   }
 }

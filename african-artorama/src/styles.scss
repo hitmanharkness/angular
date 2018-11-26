@@ -1,2 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 /* You can add global styles to this file, and also import other style files */
+
+.clickable{
+    cursor: pointer;
+}
+
+input[type='radio']{
+    margin-top:5px;
+    margin-right:4px;
+}

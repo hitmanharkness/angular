@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\african-artorama",
-    "\\african-artorama\\e2e\\src",
     "\\african-artorama\\src",
     "\\african-artorama\\src\\app",
+    "\\african-artorama\\src\\app\\art",
+    "\\african-artorama\\src\\app\\navigation",
     "\\african-artorama\\src\\assets"
   ],
   "SelectedNode": "\\african-artorama",

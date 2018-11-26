@@ -1,21 +1,16 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'navigation',
+  selector: 'app-navigation',
   templateUrl: './navigation.component.html'
 })
-export class Navigation {
+export class NavigationComponent {
   @Output() search = new EventEmitter();
 
   title = 'African Artorama';
-  input: string = '';
-  selectedSearchType: string = 'Name';
-  SearchTypes: string[] = [
-    'Name',
-    'Price'
-  ]
+  input = '';
   doSearch() {
-    var passValue = { SearchType: this.selectedSearchType, Value: this.input };
+    const passValue = { Name: this.input };
     this.search.emit(passValue);
   }
 }
