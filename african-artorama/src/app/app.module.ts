@@ -12,6 +12,8 @@ import { CostSearchComponent } from './sidebar/specific/costSearch.component';
 import { SearchDirective } from './sidebar/search.directive';
 import { ColorSearchComponent } from './sidebar/specific/colorSearch.component';
 
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { ColorSearchComponent } from './sidebar/specific/colorSearch.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
