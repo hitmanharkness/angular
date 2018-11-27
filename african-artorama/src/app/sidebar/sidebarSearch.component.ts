@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, ViewContaine
   , ComponentRef, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { CostSearchComponent } from './specific/costSearch.component';
 import { SearchDirective } from './search.directive';
+import { ColorSearchComponent } from './specific/colorSearch.component';
 
 @Component({
   selector: 'app-sidebar-search',
@@ -17,6 +18,7 @@ export class SidebarSearchComponent implements OnInit, OnDestroy {
   instance: SearchComponentBase;
   private mappings = {
     'cost': CostSearchComponent,
+    'color': ColorSearchComponent
   };
 
   constructor(

@@ -8,7 +8,7 @@ export class SidebarComponent {
   @Output() searchRelay = new EventEmitter();
 
   title = 'African Artorama';
-  SearchContexts = ['cost'];
+  SearchContexts = ['cost', 'color'];
   doSearchRelay(input: any) {
     this.searchRelay.emit(input);
   }

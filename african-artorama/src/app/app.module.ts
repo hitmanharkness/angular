@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarSearchComponent } from './sidebar/sidebarSearch.component';
 import { CostSearchComponent } from './sidebar/specific/costSearch.component';
 import { SearchDirective } from './sidebar/search.directive';
+import { ColorSearchComponent } from './sidebar/specific/colorSearch.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { SearchDirective } from './sidebar/search.directive';
     SidebarComponent,
     SidebarSearchComponent,
     CostSearchComponent,
-    SearchDirective
+    SearchDirective,
+    ColorSearchComponent
   ],
   entryComponents: [
-    CostSearchComponent
+    CostSearchComponent,
+    ColorSearchComponent
   ],
   imports: [
     BrowserModule,
