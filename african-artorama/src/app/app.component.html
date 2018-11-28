@@ -1,35 +1,21 @@
 <div class="row">
-  <app-sidebar class="col-2 position-fixed h-100 bg-secondary" (searchRelay)="handleSearch($event)"></app-sidebar>
-  <div class="offset-2 col-10">
+  <app-sidebar style="width:17.8%" class="position-fixed h-100 bg-secondary" (searchRelay)="handleSearch($event)"></app-sidebar>
+  <div class="col-10" style="margin-left:16.6%">
     <app-navigation (search)="handleSearch($event)"></app-navigation>
-    <div class="container">
-      <div style="text-align:center">
-        <h1>
-          Welcome to {{ title }}!
-        </h1>
-        <!--<img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">-->
-      </div>
-      <h2>Look at art: </h2>
-      <div class="row">
-        <art *ngFor="let item of art" [art]="item" class="col-4"></art>
-      </div>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
-
-
-  <div class="btn-group" dropdown>
-    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-      Button dropdown <span class="caret"></span>
-    </button>
-    <ul *dropdownMenu class="dropdown-menu" role="menu">
-      <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-      <li class="divider dropdown-divider"></li>
-      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-      </li>
-    </ul>
+    <main >
+      <section class="py-5">
+          <div class="container" style="text-align:center">
+              <h1>Welcome to {{ title }}!</h1>
+              <p>Some text here!</p>
+            </div>
+      </section>
+      <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <app-art *ngFor="let item of art" [art]="item" class="col-4"></app-art>
+              </div>
+        </div>
+      </section>
+    </main>
   </div>
 </div>
