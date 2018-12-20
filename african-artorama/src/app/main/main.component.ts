@@ -2,17 +2,35 @@ import { Component } from '@angular/core';
 import { ArtPiece } from '../art/ArtPiece';
 import { ArtService } from '../art/ArtService';
 import { Store } from '@ngrx/store';
-import { StartState, START_STATE } from './main.reducer';
+import { START_STATE } from './main.reducer';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-main',
-  templateUrl: './main.component.html'
+  templateUrl: './main.component.html',
+  animations: [
+    // the fade-in/fade-out animation.
+    trigger('simpleFadeAnimation', [
+
+      // the "in" style determines the "resting" state of the element when it is visible.
+      state('in', style({opacity: 1})),
+
+      // fade in when created. this could also be written as transition('void => *')
+      transition(':enter', [
+        style({opacity: 0}),
+        animate('600ms ease-in-out' )
+      ]),
+
+      // fade out when destroyed. this could also be written as transition('void => *')
+      transition(':leave',
+        animate('400ms ease-out', style({opacity: 0})))
+    ])
+  ]
 })
 export class MainComponent {
   title = 'african-artorama';
   private _art: ArtPiece[] = new ArtService().Art;
-  art: ArtPiece[] = this._art;
-  //searchParameters = ;
+  art: ArtPiece[] = Array.from(this._art);
   
   doSeach = (reducer) => {
     let artCollection = this._art;
@@ -39,6 +57,7 @@ export class MainComponent {
                 && Math.abs(c.b - b) < quantum) != null;
       });
     }
+
     this.art = artCollection;
   }
   
