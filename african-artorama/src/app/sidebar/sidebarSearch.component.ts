@@ -11,7 +11,7 @@ import { ColorSearchComponent } from './specific/colorSearch.component';
 export class SidebarSearchComponent implements OnInit, OnDestroy {
   @ViewChild(SearchDirective) searchHost: SearchDirective;
   @Input() type;
-  @Output() search = new EventEmitter();
+  //@Output() search = new EventEmitter();
   container: ViewContainerRef;
   private componentRef: ComponentRef<{}>;
   isExpanded = false;
@@ -42,7 +42,7 @@ export class SidebarSearchComponent implements OnInit, OnDestroy {
 
       // set component context
       this.instance = <SearchComponentBase> this.componentRef.instance;
-      this.instance.search.subscribe(thing => this.search.emit(thing));
+      //this.instance.search.subscribe(thing => this.search.emit(thing));
     }
   }
 
@@ -56,7 +56,7 @@ export class SidebarSearchComponent implements OnInit, OnDestroy {
 
 export abstract class SearchComponentBase {
   title: string;
-  search: EventEmitter<any>;
+  //search: EventEmitter<any>;
   hasValue: boolean;
   abstract clear();
 }

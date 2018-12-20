@@ -1,21 +1,9 @@
 <div class="row">
-  <app-sidebar style="width:17.8%" class="position-fixed h-100 bg-secondary" (searchRelay)="handleSearch($event)"></app-sidebar>
+  <app-sidebar style="width:17.8%" class="position-fixed h-100 bg-secondary"></app-sidebar>
   <div class="col-10" style="margin-left:16.6%">
-    <app-navigation (search)="handleSearch($event)"></app-navigation>
+    <app-navigation></app-navigation>
     <main >
-      <section class="py-5">
-          <div class="container" style="text-align:center">
-              <h1>Welcome to {{ title }}!</h1>
-              <p>Some text here!</p>
-            </div>
-      </section>
-      <section class="bg-light py-5">
-        <div class="container">
-            <div class="row">
-                <app-art *ngFor="let item of art" [art]="item" class="col-4"></app-art>
-              </div>
-        </div>
-      </section>
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>

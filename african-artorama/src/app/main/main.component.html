@@ -1,0 +1,13 @@
+<section class="py-5">
+    <div class="container" style="text-align:center">
+        <h1>Welcome to {{ title }}!</h1>
+        <p>Some text here!</p>
+      </div>
+</section>
+<section class="bg-light py-5">
+  <div class="container">
+      <div class="row">
+          <app-art *ngFor="let item of art" [art]="item" class="col-4"></app-art>
+        </div>
+  </div>
+</section>

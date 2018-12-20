@@ -2,7 +2,7 @@
   <h3 class="col-6">{{title}}</h3>
     <hr>
     <div *ngFor="let search of SearchContexts">
-        <app-sidebar-search (search)="doSearchRelay($event)" [type]="search"></app-sidebar-search>
+        <app-sidebar-search [type]="search"></app-sidebar-search>
     </div>
 
     

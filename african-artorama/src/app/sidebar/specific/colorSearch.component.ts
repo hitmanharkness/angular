@@ -1,5 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { SearchComponentBase } from '../sidebarSearch.component';
+import { Store } from '@ngrx/store';
+import { ADD_FILTER } from '../../main/main.reducer';
 
 @Component({
   selector: 'app-color-search',
@@ -8,13 +10,13 @@ import { SearchComponentBase } from '../sidebarSearch.component';
             '.selected { border-color: orange; border-style:solid; border-width: 2px; }' ]
 })
 export class ColorSearchComponent implements SearchComponentBase {
-  @Output() search = new EventEmitter();
+  //@Output() search = new EventEmitter();
   selectedColors = [];
   title = 'Color';
   hasValue = false;
   colors = [];
   colorQuantum = 120;
-  constructor() {
+  constructor(private _store: Store<any>) {
     for (let i = 0; i <= 240; i += this.colorQuantum) {
       for (let j = 0; j <= 240; j += this.colorQuantum) {
         for (let k = 0; k <= 240; k += this.colorQuantum) {
@@ -33,13 +35,13 @@ export class ColorSearchComponent implements SearchComponentBase {
     color.isSelected = !color.isSelected;
     this.hasValue = this.selectedColors.length > 0;
     const passValue = { Color: { colors: this.selectedColors.map(c => c.rgb), quantum: this.colorQuantum }};
-    this.search.emit(passValue);
+    this._store.dispatch({ type: ADD_FILTER, payload: passValue });
   }
   clear() {
     this.selectedColors.forEach(c => c.isSelected = false);
     this.selectedColors = [];
     this.hasValue = false;
     const passValue = { Color: null };
-    this.search.emit(passValue);
+    this._store.dispatch({ type: ADD_FILTER, payload: passValue });
   }
 }

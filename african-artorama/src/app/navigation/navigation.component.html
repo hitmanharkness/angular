@@ -4,4 +4,7 @@
       <p class="text-white mb-1 mr-1">Name: </p>
       <input class="form-control-sm" type="text" [(ngModel)]="input" (ngModelChange)="doSearch()"/>
   </div>
+  <p-menu #menu [popup]="true" [model]="items"></p-menu>
+  <button class="ml-5" type="button" pButton icon="fa fa-bars" label="Menu" (click)="menu.toggle($event)"></button>
+  
 </nav>
