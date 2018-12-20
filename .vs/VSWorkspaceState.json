@@ -2,12 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\african-artorama",
-    "\\african-artorama\\src",
-    "\\african-artorama\\src\\app",
-    "\\african-artorama\\src\\app\\art",
-    "\\african-artorama\\src\\app\\navigation",
-    "\\african-artorama\\src\\assets"
+    "\\boostrap-template-sparrow-v1.1.1\\js",
+    "\\boostrap-template-sparrow-v1.1.1\\js\\sparrow",
+    "\\boostrap-template-sparrow-v1.1.1\\scss"
   ],
-  "SelectedNode": "\\african-artorama",
+  "SelectedNode": "\\boostrap-template-sparrow-v1.1.1",
   "PreviewInSolutionExplorer": false
 }
