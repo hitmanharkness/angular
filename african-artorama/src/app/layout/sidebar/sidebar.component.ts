@@ -1,3 +1,20 @@
+// import { Component, Output, EventEmitter } from '@angular/core';
+
+// @Component({
+//   selector: 'app-sidebar',
+//   templateUrl: './sidebar.component.html'
+// })
+// export class SidebarComponent {
+//   // @Output() searchRelay = new EventEmitter();
+
+//   title = 'African Artorama';
+//   SearchContexts = ['cost', 'color'];
+//   // doSearchRelay(input: any) {
+//   //  this.searchRelay.emit(input);
+//   // }
+// }
+
+
 import { Component, OnInit, Output } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { EventEmitter } from 'events';
@@ -76,3 +93,5 @@ export class SidebarComponent implements OnInit {
   // }
 
 }
+
+
