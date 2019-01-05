@@ -1,13 +1,18 @@
+<!-- We may not want this layout for every page or our app
 <div class="row">
   <app-sidebar style="width:17.8%" class="position-fixed h-100 bg-secondary"></app-sidebar>
   <div class="col-10" style="margin-left:16.6%">
-      <!--<app-navigation></app-navigation>-->
+      <app-navigation></app-navigation>
       <main class="main minh-100vh" id="top">
           <router-outlet></router-outlet>
       </main>
   </div>
-</div>
+</div> -->
 
 
+
+<div style="height:50px; background-color: black; color: white;">app-component-router-outlet start</div>
+<router-outlet></router-outlet>
+<div style="height:50px; background-color: yellow">app-component-router-outlet end</div>
 
 
