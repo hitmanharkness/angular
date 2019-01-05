@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\african-artorama",
-    "\\boostrap-template-sparrow-v1.1.1\\js",
-    "\\boostrap-template-sparrow-v1.1.1\\js\\sparrow",
-    "\\boostrap-template-sparrow-v1.1.1\\scss"
+    "\\african-artorama\\src\\app",
+    "\\african-artorama\\src\\app\\art",
+    "\\SB-Admin-BS4-Angular-6-master",
+    "\\SB-Admin-BS4-Angular-6-master\\SB-Admin-BS4-Angular-6-master",
+    "\\SB-Admin-BS4-Angular-6-master\\SB-Admin-BS4-Angular-6-master\\src",
+    "\\SB-Admin-BS4-Angular-6-master\\SB-Admin-BS4-Angular-6-master\\src\\app"
   ],
-  "SelectedNode": "\\boostrap-template-sparrow-v1.1.1",
+  "SelectedNode": "\\african-artorama\\src",
   "PreviewInSolutionExplorer": false
 }

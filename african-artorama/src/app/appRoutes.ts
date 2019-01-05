@@ -5,5 +5,5 @@ export const AppRoutes: Routes = [
     { path: 'home', component: MainComponent },
     { path: 'register', loadChildren: './registration/registration.module#RegistrationModule' },
     { path: 'uploadArt', loadChildren: './artUpload/artUpload.module#ArtUploadModule' },
-    { path: '', redirectTo: '/home', pathMatch: 'full' }
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

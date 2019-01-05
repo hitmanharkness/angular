@@ -27,6 +27,7 @@
     "core-js": "^2.5.4",
     "fontawesome": "^4.7.2",
     "ngx-bootstrap": "^3.1.1",
+    "ngx-image-cropper": "^1.2.5",
     "primeicons": "^1.0.0",
     "primeng": "^7.0.3",
     "rxjs": "~6.3.3",

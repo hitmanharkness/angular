@@ -6,8 +6,9 @@ import { ArtInfoComponent } from './artInfo.component';
 import { ShippingComponent } from './shipping.component';
 import { ArtStatusComponent } from './artStatus.component';
 
-import ArtUploadRoutes from './artUploadRoutes';
+import { ArtUploadRoutes } from './artUploadRoutes';
 import { UploadPictureComponent } from './uploadPicture.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { UploadPictureComponent } from './uploadPicture.component';
   ],
   entryComponents: [
   ],
-  exports: [UploadPictureComponent],
+  exports: [RouterModule],
   imports: [
       CommonModule,
+      ImageCropperModule,
     RouterModule.forChild(ArtUploadRoutes)
   ],
   providers: [],
