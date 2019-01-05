@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { ADD_FILTER } from 'src/app/layout/main-section-modules/main/main.reducer';
@@ -9,7 +9,6 @@ import { SearchComponentBase } from 'src/app/layout/sidebar/sidebarSearch.compon
   templateUrl: './costSearch.component.html'
 })
 export class CostSearchComponent implements SearchComponentBase {
-  // @Output() search = new EventEmitter();
   currentSelected;
   title = 'Price';
   hasValue = false;

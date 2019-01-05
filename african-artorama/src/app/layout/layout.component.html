@@ -1,7 +1,5 @@
-<app-header></app-header>
-<app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
-<!-- <section class="main-container" [ngClass]="{collapsed: collapedSideBar}"> -->
-    <div style="height:50px; background-color: green;">layout component start</div>
+<!--main gets adjusted for sidebar-->
+<main class="main minh-100vh">
     <router-outlet></router-outlet>
-    <div style="height:50px; background-color: green;">layout component end</div>    
-<!-- </section> -->
+</main>
+

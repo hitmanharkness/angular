@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from 'src/app/layout/layout.component';
-import { MainComponent } from 'src/app/layout/main-section-modules/main/main.component';
-import { ArtComponent } from './main-section-modules/main/art/Art.component';
-import { MainModule } from 'src/app/layout/main-section-modules/main/main.module';
 
 const routes: Routes = [
   {
@@ -14,7 +10,8 @@ const routes: Routes = [
       children: [
           { path: '', redirectTo: 'main', pathMatch: 'full' },
           { path: 'main', loadChildren: 'src/app/layout/main-section-modules/main/main.module#MainModule' },
-          // { path: 'main', component: MainComponent },
+          { path: 'register', loadChildren: 'src/app/layout/main-section-modules/registration/registration.module#RegistrationModule' },
+          { path: 'uploadArt', loadChildren: 'src/app/layout/main-section-modules/artUpload/artUpload.module#ArtUploadModule' },
 
           // Just examples from the angular SB-Admin-BS4-Angular-6-master.
           // { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },

@@ -61,17 +61,13 @@ export class MainComponent {
     this.art = artCollection;
   }
 
-  constructor() {
+  constructor(private _store: Store<any>) {
+     const search = this.doSeach;
+     this._store.subscribe(reducers => {
+        search(reducers.main);
+     });
 
+     search(START_STATE);
   }
-  // ?????????????????????????????? over my head. What was Store?
-  // constructor(private _store: Store<any>) {
-  //   const search = this.doSeach;
-  //  this._store.subscribe(reducers => {
-  //      search(reducers.main);
-  //   });
-
-  //   search(START_STATE);
-  // }
 
 }

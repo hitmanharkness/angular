@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './layout/layout.module#LayoutModule' },
+  
 
   // List of things we can implement in the future if need be.
   // { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },
@@ -18,7 +19,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    // RouterModule.forRoot(routes)
     RouterModule.forRoot(routes, { enableTracing: true } )
   ],
   exports: [RouterModule]

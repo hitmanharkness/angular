@@ -1,9 +1,9 @@
-// import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-art-ingo',
-//   templateUrl: './artInfo.component.html'
-// })
-// export class ArtInfoComponent {
+@Component({
+  selector: 'app-art-ingo',
+  templateUrl: './artInfo.component.html'
+})
+export class ArtInfoComponent {
 
-// }
+}
