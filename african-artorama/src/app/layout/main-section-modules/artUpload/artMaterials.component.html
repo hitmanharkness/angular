@@ -1,0 +1,47 @@
+<div style="margin:5px">
+        <p-progressBar value="50"></p-progressBar>
+    </div>
+    
+    <div>
+        <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+            </div>
+            <div>
+                    <h3 class="text-center">Mediums, Materials, & Styles</h3>
+                <div class="m-4">
+                    <p class="text-center">Select 1-5 mediums</p>
+                    <p-autoComplete [(ngModel)]="mediums" [suggestions]="filteredMediums" (completeMethod)="filterMediums($event)" 
+                        class="offset-2 col-8" [minLength]="0" placeholder="Mediums..." [multiple]="true">
+                    </p-autoComplete>
+                </div>
+                <div class="m-4">
+                    <p class="text-center">Select 1-5 materials</p>
+                    <p-autoComplete [(ngModel)]="materials" [suggestions]="filteredMaterials" (completeMethod)="filterMaterials($event)" 
+                        class="offset-2 col-8" [minLength]="0" placeholder="Materials..." [multiple]="true">
+                    </p-autoComplete>
+                </div>
+                <div class="m-4">
+                        <p class="text-center">Select 1-5 styles</p>
+                        <p-autoComplete [(ngModel)]="styles" [suggestions]="filteredStyles" (completeMethod)="filterStyles($event)" 
+                            class="offset-2 col-8" [minLength]="0" placeholder="Styles..." [multiple]="true">
+                        </p-autoComplete>
+                </div>
+            </div>
+            <div class="m-5">
+                <div>
+                    <h3 class="text-center">Keywords</h3>
+                    <p class="text-center">Keywords help collectors find your artwork.</p>
+                    <div>
+                        <p class="text-center">Select 5-12 keywords</p>
+                        <p-autoComplete [(ngModel)]="keywords" [suggestions]="filteredKeywords" (completeMethod)="filterKeywords($event)"  [minLength]="0"
+                            class="offset-2" placeholder="Keywords..." [multiple]="true" >
+                        </p-autoComplete>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            </div>
+        </div>
+    </div>

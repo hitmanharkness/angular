@@ -1,17 +1,38 @@
-<h2>Category</h2>
+<div style="margin:5px">
+    <p-progressBar value="25"></p-progressBar>
+</div>
 
-<form class="md-form">
+<div>
     <div class="file-field">
         <div class="z-depth-1-half mb-4">
         </div>
         <div class="d-flex justify-content-center">
-            <div class="btn btn-mdb-color btn-rounded float-left">
-                
-            </div>
             <div>
-                <button class="button fa fa-arrow-left" (click)="previous()"></button>
-                <button class="button fa fa-arrow-right" (click)="next()"></button>
+                <h3 class="text-center">Subject</h3>
+                <p-autoComplete [(ngModel)]="subject" [suggestions]="filteredSubjectsSingle" (completeMethod)="filterSubjectSingle($event)" 
+                [size]="30" placeholder="Select a subject..." [minLength]="1" [immutable]="false"></p-autoComplete>
             </div>
         </div>
+        <div>
+            <div>
+                <h3 class="text-center">Art Type</h3>
+                <div class="container">
+                    <div class="row">
+                        <div *ngFor="let item of artTypes" class="col-4">
+                            <div class="hoverbox rounded overflow-hidden zoom" (click)="select(item)" [class.selected]="item.IsSelected">
+                                <img class="w-100" alt="" [src]="item.ImagePath">
+                                <div class="px-4 rounded-bottom bg-info">
+                                    <h5 class="text-white">{{item.Name}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+            <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+        </div>
     </div>
-</form>
+</div>

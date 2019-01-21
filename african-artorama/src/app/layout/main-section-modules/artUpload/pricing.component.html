@@ -1,0 +1,51 @@
+<div style="margin:5px">
+        <p-progressBar value="88"></p-progressBar>
+    </div>
+    
+    <div>
+        <div class="file-field">
+            <div>
+                <h3 class="text-center">Pricing</h3>
+                <p class="text-center">Price your artwork and see what buyers will see.</p>
+            </div>
+            <form [formGroup]="priceGroup">
+                <div class="d-flex justify-content-center flex-column">
+                    <div class="m-2">
+                        <div class="center-horizontally" style="width:500px;">
+                            <div class="row">
+                                <p class="startText">Price of the artwork</p>
+                                <input formControlName="artistPrice" class="costDisplay" style="height: 30px;" type="text" pInputText> 
+                            </div>
+                            <div class="row">
+                                <p class="startText">Your profit (65%)</p>
+                                <p class="costDisplay bg-success ui-corner-all">{{artistProfit}}</p>
+                            </div>
+                            <div class="row">
+                                <p class="startText">Shipping and handling.  Paid by the buyer.</p>
+                                <p class="costDisplay">{{shippingCost}}</p>
+                            </div>
+                            <div class="row">
+                                <p class="startText">Price the buyer will see</p>
+                                <p class="costDisplay bg-info ui-corner-all">{{buyerPrice}}</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="text-center m-2">
+                        
+                    </div>
+                    <div class="text-center m-2">
+                        
+                    </div>
+                    <hr>
+                    <div class="text-center m-2">
+                        
+                    </div>
+                </div>
+            </form>
+            <div class="mb-2">
+                <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            </div>
+        </div>
+    </div>

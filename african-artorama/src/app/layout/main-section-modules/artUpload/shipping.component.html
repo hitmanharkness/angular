@@ -1,1 +1,63 @@
- <p>Hi!</p> 
+<div style="margin:5px">
+        <p-progressBar value="75"></p-progressBar>
+    </div>
+    
+    <div>
+        <div class="file-field">
+            <div>
+                <h3 class="text-center">Shipping Weight</h3>
+                <div class="container d-flex offset-5">
+                    <input style="width:50px;" class="h-50 ui-inputtext ui-state-default ui-corner-all" [(ngModel)]="shippingWeight">
+                    <p class="ml-1">kilograms</p>
+                </div>
+            </div>
+            <form [formGroup]="addressGroup">
+                <div class="d-flex justify-content-center flex-column">
+                    <h3 class="text-center">Shipping Address</h3>
+                    <p class="text-center">Where will the package be picked up?</p>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <input formControlName="address" id="float-input1" type="text" size="30" pInputText> 
+                            <label for="float-input1">Address</label>
+                        </span>   
+                    </div>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <input formControlName="address2" id="float-input2" type="text" size="30" pInputText> 
+                            <label for="float-input2">Address 2</label>
+                        </span>   
+                    </div>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <input formControlName="city" id="float-input3" type="text" size="30" pInputText> 
+                            <label for="float-input3">City</label>
+                        </span>   
+                    </div>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <p-autoComplete formControlName="state" [suggestions]="filteredStates" (completeMethod)="filterStates($event)"  
+                                [minLength]="0" inputStyleClass="backMargin" id="float-input4"></p-autoComplete>
+                            <label for="float-input4">State</label>
+                        </span>   
+                    </div>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <p-autoComplete formControlName="country" [suggestions]="filteredCountries" (completeMethod)="filterCountries($event)"  
+                                [minLength]="0" inputStyleClass="backMargin" id="float-input5"></p-autoComplete>
+                            <label for="float-input5">Country</label>
+                        </span>   
+                    </div>
+                    <div class="text-center m-2">
+                        <span class="ui-float-label center-horizontally">
+                            <input formControlName="zip" id="float-input1" type="number" size="30" pInputText> 
+                            <label for="float-input1">Zip</label>
+                        </span>   
+                    </div>
+                </div>
+            </form>
+            <div class="mb-2">
+                <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            </div>
+        </div>
+    </div>

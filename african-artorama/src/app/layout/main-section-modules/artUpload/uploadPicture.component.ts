@@ -34,7 +34,6 @@ export class UploadPictureComponent {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   imageExists: boolean = !!this.croppedImage;
-  
   constructor(
     private router: Router
   ) {}
@@ -53,6 +52,6 @@ export class UploadPictureComponent {
   }
 
   next() {
-    this.router.navigate(['uploadArt/artCategory']);
+    this.router.navigate(['uploadArt/artInfo']);
   }
 }

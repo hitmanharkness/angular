@@ -1,5 +1,5 @@
-<div class="progress" style="margin:5px 5px 5px 0">
-    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+<div style="margin:5px">
+    <p-progressBar value="0"></p-progressBar>
 </div>
 
 <div style="text-align:center">
@@ -9,7 +9,7 @@
 
 <form class="md-form">
     <div class="file-field">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" style="min-height: 400px">
             <div class="btn btn-mdb-color btn-rounded float-left"  style="text-align:center">
                 <input type="file" name="file" id="file" class="inputfile" (change)="fileChangeEvent($event)">
                 <label for="file"><img class="fa fa-upload"/> Choose a file</label>
@@ -27,7 +27,7 @@
                 <img [src]="croppedImage" />
             </div>
         </div>
-        <div>
+        <div class="mb-2">
             <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
         </div>
     </div>
