@@ -45,7 +45,8 @@
             </form>
             <div class="mb-2">
                 <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
-                <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!priceGroup.valid" 
+                (click)="next()" [title]="!priceGroup.valid ? 'Please fill in price' : ''"><img class="fa fa-arrow-right"/></button>
             </div>
         </div>
     </div>

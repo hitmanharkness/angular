@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './layout/layout.module#LayoutModule' },
-  
 
   // List of things we can implement in the future if need be.
   // { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },

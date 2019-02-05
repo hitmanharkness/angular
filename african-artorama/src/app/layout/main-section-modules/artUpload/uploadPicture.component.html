@@ -28,7 +28,10 @@
             </div>
         </div>
         <div class="mb-2">
-            <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            <button class="btn btn-primary" style="float:right;margin-right:10px;" [title]="imageExists ? '' : 'Please select a photo.'" 
+                [disabled]="!imageExists" (click)="next()">
+                <img class="fa fa-arrow-right"/>
+            </button>
         </div>
     </div>
 </form>

@@ -7,11 +7,11 @@
         <div class="z-depth-1-half mb-4">
         </div>
         <div class="d-flex justify-content-center">
-            <div>
+            <form [formGroup]="subjectGroup">
                 <h3 class="text-center">Subject</h3>
-                <p-autoComplete [(ngModel)]="subject" [suggestions]="filteredSubjectsSingle" (completeMethod)="filterSubjectSingle($event)" 
+                <p-autoComplete formControlName="subject" [suggestions]="filteredSubjectsSingle" (completeMethod)="filterSubjectSingle($event)" 
                 [size]="30" placeholder="Select a subject..." [minLength]="1" [immutable]="false"></p-autoComplete>
-            </div>
+            </form>
         </div>
         <div>
             <div>
@@ -32,7 +32,8 @@
         </div>
         <div class="mb-2">
             <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
-            <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!subjectGroup.valid || !selectedItem" 
+            (click)="next()" [title]="!subjectGroup.valid || !selectedItem ? 'Please choose a subject and category' : ''"><img class="fa fa-arrow-right"/></button>
         </div>
     </div>
 </div>

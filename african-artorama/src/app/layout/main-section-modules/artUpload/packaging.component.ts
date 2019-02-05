@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SET_PACKAGING } from './artUpload.reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-packaging',
@@ -26,7 +28,16 @@ export class PackagingComponent {
                     , { Name: 'Tube', ImagePath: 'assets/img/gallery/03.jpg' } ];
   selectedItem: any;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private store: Store<any>) {
+    let packaging;
+    this.store.subscribe(s => packaging = s.artUpload.packaging);
+    if (packaging) {
+      this.isFramed = packaging.isFramed;
+      this.isMultiPaned = packaging.isMultiPaned;
+      const selectedItem = this.packagings.find(a => a.Name === packaging.packageStyle);
+      this.select(selectedItem);
+    }
+  }
 
   select(item) {
     if (this.selectedItem) { this.selectedItem.IsSelected = false; }
@@ -34,10 +45,21 @@ export class PackagingComponent {
     this.selectedItem = item;
   }
 
+  saveValues() {
+    const packaging = {
+      packageStyle: this.selectedItem.Name,
+      isFramed: this.isFramed,
+      isMultiPaned: this.isMultiPaned
+    };
+    this.store.dispatch({ type: SET_PACKAGING, payload: packaging });
+  }
+
   previous() {
+    this.saveValues();
     this.router.navigate(['uploadArt/artMaterials']);
   }
   next() {
+    this.saveValues();
     this.router.navigate(['uploadArt/shipping']);
   }
 }

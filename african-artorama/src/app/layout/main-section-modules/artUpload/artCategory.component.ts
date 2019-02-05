@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FilterHelper } from 'src/app/helpers/FilterHelper';
+import { Store } from '@ngrx/store';
+import { SET_CATEGORY } from './artUpload.reducer';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-art-category',
@@ -20,7 +23,7 @@ import { FilterHelper } from 'src/app/helpers/FilterHelper';
   ]
 })
 export class ArtCategoryComponent {
-  subject: any;
+  subjectGroup: FormGroup;
   filteredSubjectsSingle: any[];
   selectedItem: any;
 
@@ -46,12 +49,36 @@ export class ArtCategoryComponent {
     this.selectedItem = item;
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private store: Store<any>, private formBuilder: FormBuilder) {
+    this.subjectGroup = formBuilder.group({
+      subject: new FormControl('', [ Validators.required ])
+    });
+
+    let tempSubject;
+    this.store.subscribe(s => tempSubject = s.artUpload.category);
+    if (tempSubject) {
+      this.subjectGroup.patchValue({
+        subject: tempSubject.subject
+      });
+      const selectedItem = this.artTypes.find(a => a.Name === tempSubject.category);
+      this.select(selectedItem);
+    }
+  }
+
+  saveValues() {
+    const info = {
+      subject: this.subjectGroup.controls['subject'].value,
+      category: this.selectedItem.Name
+    };
+    this.store.dispatch({ type: SET_CATEGORY, payload: info });
+  }
 
   previous() {
+    this.saveValues();
     this.router.navigate(['uploadArt/artInfo']);
   }
   next() {
+    this.saveValues();
     this.router.navigate(['uploadArt/artStatus']);
   }
 }

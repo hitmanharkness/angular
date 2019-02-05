@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { artUploadReducer, SET_PHOTO } from './artUpload.reducer';
 
 @Component({
   selector: 'app-upload-picture',
@@ -34,15 +36,22 @@ export class UploadPictureComponent {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   imageExists: boolean = !!this.croppedImage;
-  constructor(
-    private router: Router
-  ) {}
+
+  constructor(private _store: Store<any>, private router: Router) {
+    let photoInfo;
+    this._store.subscribe(s => photoInfo = s.artUpload.photo);
+    if (photoInfo) {
+      this.imageChangedEvent = photoInfo.event;
+      this.croppedImage = photoInfo.image;
+    }
+  }
 
   fileChangeEvent(event: any): void {
       this.imageChangedEvent = event;
   }
   imageCropped(event: ImageCroppedEvent) {
       this.croppedImage = event.base64;
+      this.imageExists = !!this.croppedImage;
   }
   imageLoaded() {
       // show cropper
@@ -52,6 +61,7 @@ export class UploadPictureComponent {
   }
 
   next() {
+    this._store.dispatch({ type: SET_PHOTO, payload: { image: this.croppedImage, event: this.imageChangedEvent } });
     this.router.navigate(['uploadArt/artInfo']);
   }
 }

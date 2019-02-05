@@ -4,13 +4,13 @@
     
     <div>
         <div class="file-field">
-            <div>
+            <form [formGroup]="shippingGroup">
                 <h3 class="text-center">Shipping Weight</h3>
                 <div class="container d-flex offset-5">
-                    <input style="width:50px;" class="h-50 ui-inputtext ui-state-default ui-corner-all" [(ngModel)]="shippingWeight">
+                    <input style="width:50px;" class="h-50 ui-inputtext ui-state-default ui-corner-all" formControlName="shippingWeight">
                     <p class="ml-1">kilograms</p>
                 </div>
-            </div>
+            </form>
             <form [formGroup]="addressGroup">
                 <div class="d-flex justify-content-center flex-column">
                     <h3 class="text-center">Shipping Address</h3>
@@ -57,7 +57,8 @@
             </form>
             <div class="mb-2">
                 <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
-                <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!shippingGroup.valid || !addressGroup.valid" 
+                (click)="next()" [title]="!shippingGroup.valid || !addressGroup.valid ? 'Please fill in the required information' : ''"><img class="fa fa-arrow-right"/></button>
             </div>
         </div>
     </div>

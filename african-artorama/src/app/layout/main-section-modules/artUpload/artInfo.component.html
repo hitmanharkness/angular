@@ -4,30 +4,30 @@
 
 <div>
     <div class="file-field">
-        <div class="z-depth-1-half mb-4">
-        </div>
-        <div>
-            <div class="d-flex justify-content-center flex-column">
-                <h3 class="text-center">Title</h3>
-                <input class="offset-1 col-10" type="text" [(ngModel)]="artTitle" />
-                <div class="d-flex offset-4 p-2" style="height: 40px;">
-                    <input class="mt-1 mr-1" type="checkbox" [(ngModel)]="isLimitedAddition"/>
-                    <label class="mr-1" style="font-size: medium">Limited Addition</label>
-                    <div *ngIf="isLimitedAddition" class="d-flex justify-content-center">
-                        <input class="input-sm mr-1" type="number" [(ngModel)]="limitedAdditionNumber"/>
-                        <p class="mr-1"> of </p>
-                        <input class="input-sm" type="number" [(ngModel)]="limitedAdditionTotal"/>
+        <form [formGroup]=titleGroup>
+            <div>
+                <div class="d-flex justify-content-center flex-column">
+                    <h3 class="text-center">Title</h3>
+                    <input class="offset-1 col-10" type="text" formControlName="artTitle" />
+                    <div class="d-flex offset-4 p-2" style="height: 40px;">
+                        <input class="mt-1 mr-1" type="checkbox" [(ngModel)]="isLimitedAddition" [ngModelOptions]="{standalone: true}"/>
+                        <label class="mr-1" style="font-size: medium">Limited Addition</label>
+                        <div *ngIf="isLimitedAddition" class="d-flex justify-content-center">
+                            <input class="input-sm mr-1" type="number" [(ngModel)]="limitedAdditionNumber" [ngModelOptions]="{standalone: true}"/>
+                            <p class="mr-1"> of </p>
+                            <input class="input-sm" type="number" [(ngModel)]="limitedAdditionTotal" [ngModelOptions]="{standalone: true}"/>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
             <div>
-                <h3 class="text-center">Description</h3>
-                <p class="text-center">Please enter a description of the art:</p>
-                <textarea class="offset-1 col-10" type="text" rows="5" [(ngModel)]="description"></textarea>
+                <div>
+                    <h3 class="text-center">Description</h3>
+                    <p class="text-center">Please enter a description of the art:</p>
+                    <textarea class="offset-1 col-10" type="text" rows="5" formControlName="description"></textarea>
+                </div>
             </div>
-        </div>
+        </form>
         <div>
             <form [formGroup]="heightWidthGroup">
                 <h3 class="text-center">Dimensions</h3>
@@ -63,7 +63,8 @@
         </div>
         <div class="mb-2">
             <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
-            <button class="btn btn-primary" style="float:right;margin-right:10px;" (click)="next()"><img class="fa fa-arrow-right"/></button>
+            <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!heightWidthGroup.valid || !titleGroup.valid" 
+                (click)="next()" [title]="!heightWidthGroup.valid || !titleGroup.valid ? 'Please enter the required fields' : ''"><img class="fa fa-arrow-right"/></button>
         </div>
     </div>
 </div>
