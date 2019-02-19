@@ -1,0 +1,15 @@
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.csproj.CoreCompileInputs.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.AssemblyInfoInputs.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.AssemblyInfo.cs
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\bin\Debug\netcoreapp2.1\AfricanArtoramaAPI.deps.json
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\bin\Debug\netcoreapp2.1\AfricanArtoramaAPI.runtimeconfig.json
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\bin\Debug\netcoreapp2.1\AfricanArtoramaAPI.runtimeconfig.dev.json
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\bin\Debug\netcoreapp2.1\AfricanArtoramaAPI.dll
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.csprojAssemblyReference.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.RazorAssemblyInfo.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.RazorAssemblyInfo.cs
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.RazorTargetAssemblyInfo.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\bin\Debug\netcoreapp2.1\AfricanArtoramaAPI.pdb
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.dll
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\AfricanArtoramaAPI.pdb
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtoramaAPI\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

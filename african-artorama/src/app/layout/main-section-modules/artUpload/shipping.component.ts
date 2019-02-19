@@ -62,7 +62,7 @@ export class ShippingComponent {
     const shipping = {
       weight: this.shippingGroup.controls['shippingWeight'].value,
       address: this.addressGroup.controls['address'].value,
-      address2: this.addressGroup.controls['address'].value,
+      address2: this.addressGroup.controls['address2'].value,
       city: this.addressGroup.controls['city'].value,
       state: this.addressGroup.controls['state'].value,
       country: this.addressGroup.controls['country'].value,

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ArtPiece } from './ArtPiece';
+import { ArtPiece } from '../../../../Models/ArtPiece';
 
 @Component({
   selector: 'app-art',

@@ -4,13 +4,14 @@ import { CommonModule } from '@angular/common';
 
 import { SearchDirective } from '../../sidebar/search.directive';
 import { ArtComponent } from './art/Art.component';
-import { ArtService } from './art/ArtService';
+import { ArtService } from '../../../Services/ArtService';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from 'src/app/layout/main-section-modules/main/main-routing.module';
 import { CostSearchComponent } from '../../sidebar/specific/costSearch.component';
 import { ColorSearchComponent } from '../../sidebar/specific/colorSearch.component';
 import { SidebarComponent } from '../../sidebar/sidebar.component';
 import { SidebarSearchComponent } from '../../sidebar/sidebarSearch.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SidebarSearchComponent } from '../../sidebar/sidebarSearch.component';
   imports: [
     CommonModule,
     MainRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   entryComponents: [
     CostSearchComponent,

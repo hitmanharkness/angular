@@ -41,7 +41,7 @@ export class UploadPictureComponent {
     let photoInfo;
     this._store.subscribe(s => photoInfo = s.artUpload.photo);
     if (photoInfo) {
-      this.imageChangedEvent = photoInfo.event;
+      this.imageChangedEvent = photoInfo.saveEvent;
       this.croppedImage = photoInfo.image;
     }
   }
@@ -61,7 +61,7 @@ export class UploadPictureComponent {
   }
 
   next() {
-    this._store.dispatch({ type: SET_PHOTO, payload: { image: this.croppedImage, event: this.imageChangedEvent } });
+    this._store.dispatch({ type: SET_PHOTO, payload: { image: this.croppedImage, saveEvent: this.imageChangedEvent } });
     this.router.navigate(['uploadArt/artInfo']);
   }
 }

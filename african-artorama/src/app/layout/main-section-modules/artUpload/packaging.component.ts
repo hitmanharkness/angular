@@ -35,7 +35,9 @@ export class PackagingComponent {
       this.isFramed = packaging.isFramed;
       this.isMultiPaned = packaging.isMultiPaned;
       const selectedItem = this.packagings.find(a => a.Name === packaging.packageStyle);
-      this.select(selectedItem);
+      if (selectedItem) {
+        this.select(selectedItem);
+      }
     }
   }
 
@@ -46,8 +48,9 @@ export class PackagingComponent {
   }
 
   saveValues() {
+    const name = this.selectedItem ? this.selectedItem.Name : '';
     const packaging = {
-      packageStyle: this.selectedItem.Name,
+      packageStyle: name,
       isFramed: this.isFramed,
       isMultiPaned: this.isMultiPaned
     };

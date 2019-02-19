@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SB-Admin-BS4-Angular-6-master\\SB-Admin-BS4-Angular-6-master"
+    "\\API-Server",
+    "\\API-Server\\AfricanArtoramaAPI",
+    "\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI"
   ],
-  "SelectedNode": "\\african-artorama",
+  "SelectedNode": "\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj",
   "PreviewInSolutionExplorer": false
 }

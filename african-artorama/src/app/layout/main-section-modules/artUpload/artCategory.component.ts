@@ -27,6 +27,8 @@ export class ArtCategoryComponent {
   filteredSubjectsSingle: any[];
   selectedItem: any;
 
+
+
   subjects: string[] = ['Beach', 'Sunrise', 'Animals', 'Fruit', 'Cars'];
   artTypes: any[] = [ { Name: 'Painting', ImagePath: 'assets/img/gallery/01.jpg' }
                     , { Name: 'Photography', ImagePath: 'assets/img/gallery/02.jpg' }
@@ -61,14 +63,17 @@ export class ArtCategoryComponent {
         subject: tempSubject.subject
       });
       const selectedItem = this.artTypes.find(a => a.Name === tempSubject.category);
-      this.select(selectedItem);
+      if (selectedItem) {
+        this.select(selectedItem);
+      }
     }
   }
 
   saveValues() {
+    const category = this.selectedItem ? this.selectedItem.Name : '';
     const info = {
       subject: this.subjectGroup.controls['subject'].value,
-      category: this.selectedItem.Name
+      category: category
     };
     this.store.dispatch({ type: SET_CATEGORY, payload: info });
   }

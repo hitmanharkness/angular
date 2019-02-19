@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { START_STATE } from './main.reducer';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { ArtPiece } from 'src/app/layout/main-section-modules/main/art/ArtPiece';
-import { ArtService } from 'src/app/layout/main-section-modules/main/art/ArtService';
+import { ArtPiece } from 'src/app/Models/ArtPiece';
+import { ArtService } from 'src/app/Services/ArtService';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main',
@@ -27,10 +28,23 @@ import { ArtService } from 'src/app/layout/main-section-modules/main/art/ArtServ
     ])
   ]
 })
+@Injectable()
 export class MainComponent {
   title = 'african-artorama';
-  private _art: ArtPiece[] = new ArtService().Art;
-  art: ArtPiece[] = Array.from(this._art);
+  private _art: ArtPiece[];
+  art: ArtPiece[] = [];
+
+  constructor(private _store: Store<any>, private http: HttpClient) {
+    const search = this.doSeach;
+    this._store.subscribe(reducers => {
+       search(reducers.main);
+    });
+
+    new ArtService(this.http).getArt().subscribe(artPieces => {
+      this._art = artPieces;
+      search(START_STATE);
+    });
+ }
 
   doSeach = (reducer) => {
     let artCollection = this._art;
@@ -60,14 +74,4 @@ export class MainComponent {
 
     this.art = artCollection;
   }
-
-  constructor(private _store: Store<any>) {
-     const search = this.doSeach;
-     this._store.subscribe(reducers => {
-        search(reducers.main);
-     });
-
-     search(START_STATE);
-  }
-
 }
