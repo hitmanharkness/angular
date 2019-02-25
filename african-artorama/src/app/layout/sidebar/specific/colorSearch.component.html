@@ -1,0 +1,4 @@
+<div class="row container noRight">
+  <div *ngFor="let color of colors" class="col-2 color" [style.background-color]="color.color" 
+      [class.selected]="color.isSelected" (click)="toggleColor(color)"></div>
+</div>

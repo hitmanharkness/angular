@@ -1,0 +1,26 @@
+<div class="row">
+    <app-sidebar style="width:17.8%" class="position-fixed h-100 bg-secondary"></app-sidebar>
+    <div class="col-10" style="margin-left:16.6%">
+        <div id="top">
+            <section class="py-5">
+                <div class="container" style="text-align:center">
+                  <div class="row mb-5 mb-lg-7">
+                    <div class="col-lg-6 offset-lg-3">
+                        <h1 class="text-underline d-inline fs-4 fs-md-5">African Artorama</h1>
+                        <p class="mt-3">The following layout is made using isotope, a jQuery plugin which allows you to create multi-column, dynamic grid layouts. The first script out there that allows you a complete gap-free layout.</p>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="bg-light" style="margin-left:0.5%">
+              <div class="container">
+                  <div class="row">
+                      <app-art *ngFor="let item of art" [art]="item" class="col-4" [@simpleFadeAnimation]="'in'"></app-art>
+                  </div>
+              </div>
+            </section>            
+        </div>
+    </div>
+  </div> 
+
+

@@ -7,9 +7,9 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,6 +41,7 @@
   <!--===============================================-->
   <!--    Fancynav-->
   <!--===============================================-->
+  <!-- There plugins contain the right navigation and require jquery and the theme -->
   <nav class="fancynavbar" data-zanim-md='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-48},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-trigger="scroll" data-exclusive="true">
     <div class="fancynavbar-togglerbar">
       <a class="fancynavbar-brand" href="#">
@@ -78,9 +79,12 @@
         </li>
         ....
         <li class="fancynav-item">
-          <a class="fancynav-link" href="#"><span class="fancynav-link-content">Nav Link</span></a>
+          <a class="fancynav-link" href="/register"><span class="fancynav-link-content">Register</span></a>
         </li>
         ....
+        <li class="fancynav-item">
+          <a class="fancynav-link" href="/uploadArt"><span class="fancynav-link-content">Upload Art</span></a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -92,32 +96,6 @@
   
   
   <app-root></app-root>
-
-
-
-
-
-
-  <!-- ===============================================-->
-  <!--    Main Content-->
-  <!-- ===============================================-->
-  <!-- <main class="main minh-100vh" id="top"> -->
-
-
-      <!-- ============================================-->
-      <!-- Preloader ==================================-->
-      
-      <!-- ============================================-->
-      <!-- End of Preloader ===========================-->
-  
-  
-
-  
-  
-    <!-- </main> -->
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
 
 
   <!--===============================================-->
@@ -143,13 +121,17 @@
   </footer>
 
 
-    <!-- ===============================================-->
+  <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
+  <!-- There plugins contain the right navigation and require jquery and the theme -->
+  <script src="assets/js/plugins.js"></script> 
+  <script src="assets/js/theme.js"></script>
+
+  <script src="assets/js/popper.min.js"></script> 
   <script src="assets/js/bootstrap.js"></script>
-  <script src="assets/js/plugins.js"></script>
+
   <script src="assets/lib/loaders.css/loaders.css.js"></script>
   <script src="assets/js/stickyfill.min.js"></script>
   <script src="assets/lib/remodal/remodal.js"></script>
@@ -158,7 +140,8 @@
   <script src="assets/lib/lightbox2/js/lightbox.js"></script>
   <script src="assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/lib/isotope-packery/packery-mode.pkgd.min.js"></script>
-  <script src="assets/js/theme.js"></script>
+
+
 
 
   

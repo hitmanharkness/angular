@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\african-artorama",
-    "\\boostrap-template-sparrow-v1.1.1\\js",
-    "\\boostrap-template-sparrow-v1.1.1\\js\\sparrow",
-    "\\boostrap-template-sparrow-v1.1.1\\scss"
+    "\\API-Server",
+    "\\API-Server\\AfricanArtoramaAPI",
+    "\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI"
   ],
-  "SelectedNode": "\\boostrap-template-sparrow-v1.1.1",
+  "SelectedNode": "\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj",
   "PreviewInSolutionExplorer": false
 }

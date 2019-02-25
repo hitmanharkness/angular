@@ -1,41 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CalendarModule } from 'primeng/calendar';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { ArtComponent } from './art/Art.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { SidebarSearchComponent } from './sidebar/sidebarSearch.component';
-import { CostSearchComponent } from './sidebar/specific/costSearch.component';
-import { SearchDirective } from './sidebar/search.directive';
-import { ColorSearchComponent } from './sidebar/specific/colorSearch.component';
-
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+// import { AuthGuard } from './shared';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './reducers';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    ArtComponent,
-    SidebarComponent,
-    SidebarSearchComponent,
-    CostSearchComponent,
-    SearchDirective,
-    ColorSearchComponent
-  ],
-  entryComponents: [
-    CostSearchComponent,
-    ColorSearchComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BsDropdownModule.forRoot(),
-    CalendarModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule, // created routing module.
+
+    StoreModule.forRoot(reducers, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]

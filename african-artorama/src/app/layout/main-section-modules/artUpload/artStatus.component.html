@@ -1,0 +1,36 @@
+<div style="margin:5px">
+        <p-progressBar value="42"></p-progressBar>
+    </div>
+    
+    <div>
+        <div class="file-field">
+            <div class="z-depth-1-half mb-4">
+            </div>
+            <form [formGroup]="questionsGroup">
+                <div class="d-flex justify-content-center flex-column">
+                    <h3 class="text-center">Art Status</h3>
+                    <div class="text-center m-2">
+                        <label>What year did you create this artwork?</label>
+                        <input class="offset-1 col-10 ml-3" style="width:90px;" type="number" formControlName="year" />
+                    </div>
+                    <div class="text-center m-2">
+                        <label class="mr-3">Is this the original artwork?</label>
+                        <p-toggleButton formControlName="isOriginal"></p-toggleButton>
+                    </div>
+                    <div class="text-center m-2">
+                        <label class="mr-3">Would you like to make it available for prints?</label>
+                        <p-toggleButton formControlName="availableToPrint"></p-toggleButton>
+                    </div>
+                    <div class="text-center m-2">
+                        <label class="mr-3">Are you the copywright owner?</label>
+                        <p-toggleButton formControlName="copyOwner"></p-toggleButton>
+                    </div>
+                </div>
+            </form>
+            <div class="mb-2">
+                <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!questionsGroup.valid" 
+                (click)="next()" [title]="!questionsGroup.valid ? 'Please enter the year' : ''"><img class="fa fa-arrow-right"/></button>
+            </div>
+        </div>
+    </div>

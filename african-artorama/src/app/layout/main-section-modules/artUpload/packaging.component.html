@@ -1,0 +1,38 @@
+<div style="margin:5px">
+        <p-progressBar value="62"></p-progressBar>
+    </div>
+    
+    <div>
+        <div class="file-field">
+            <div>
+                <div>
+                    <h3 class="text-center">Packaging</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div *ngFor="let item of packagings" class="col-4">
+                                <div class="hoverbox rounded overflow-hidden zoom" (click)="select(item)" [class.selected]="item.IsSelected">
+                                    <img class="w-100" alt="" [src]="item.ImagePath">
+                                    <div class="px-4 rounded-bottom bg-info">
+                                        <h5 class="text-white">{{item.Name}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center m-2">
+                    <label class="mr-3">Is the artwork framed?</label>
+                    <p-toggleButton [(ngModel)]="isFramed"></p-toggleButton>
+                </div>
+                <div class="text-center m-2">
+                    <label class="mr-3">Is the artwork multi-paneled?</label>
+                    <p-toggleButton [(ngModel)]="isMultiPaneled"></p-toggleButton>
+                </div>
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-primary" style="margin-left:10px;" (click)="previous()"><img class="fa fa-arrow-left"/></button>
+                <button class="btn btn-primary" style="float:right;margin-right:10px;" [disabled]="!selectedItem" 
+                (click)="next()" [title]="!selectedItem ? 'Please choose a packaging type' : ''"><img class="fa fa-arrow-right"/></button>
+            </div>
+        </div>
+    </div>

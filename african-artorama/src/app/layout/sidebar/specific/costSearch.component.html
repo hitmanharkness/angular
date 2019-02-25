@@ -1,0 +1,6 @@
+<div *ngFor="let option of options">
+  <div class="row container noRight">
+    <input [id]="option" type="radio" name="priceGroup" [(ngModel)]="currentSelected" [value]="option" (change)="doSearch(option)"/>
+    <label [for]="option">{{option}}</label>
+  </div>
+</div>

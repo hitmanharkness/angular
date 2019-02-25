@@ -1,0 +1,37 @@
+<div style="margin:5px">
+    <p-progressBar value="0"></p-progressBar>
+</div>
+
+<div style="text-align:center">
+    <h2>Upload</h2>
+    <p>Upload your picture</p>
+</div>
+
+<form class="md-form">
+    <div class="file-field">
+        <div class="d-flex justify-content-center" style="min-height: 400px">
+            <div class="btn btn-mdb-color btn-rounded float-left"  style="text-align:center">
+                <input type="file" name="file" id="file" class="inputfile" (change)="fileChangeEvent($event)">
+                <label for="file"><img class="fa fa-upload"/> Choose a file</label>
+                <image-cropper
+                    [imageChangedEvent]="imageChangedEvent"
+                    [maintainAspectRatio]="true"
+                    [aspectRatio]="4 / 3"
+                    [resizeToWidth]="128"
+                    format="png"
+                    (imageCropped)="imageCropped($event)"
+                    (imageLoaded)="imageLoaded()"
+                    (loadImageFailed)="loadImageFailed()"
+                ></image-cropper>
+                <h4 [hidden]="!croppedImage">Cropped Image:</h4>
+                <img [src]="croppedImage" />
+            </div>
+        </div>
+        <div class="mb-2">
+            <button class="btn btn-primary" style="float:right;margin-right:10px;" [title]="imageExists ? '' : 'Please select a photo.'" 
+                [disabled]="!imageExists" (click)="next()">
+                <img class="fa fa-arrow-right"/>
+            </button>
+        </div>
+    </div>
+</form>
