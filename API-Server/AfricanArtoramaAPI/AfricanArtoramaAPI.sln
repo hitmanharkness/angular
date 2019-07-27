@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfricanArtoramaAPI", "AfricanArtoramaAPI\AfricanArtoramaAPI.csproj", "{F0739E1C-6563-4757-9C7E-4D3668D6389F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfricanArtoramaAPI", "AfricanArtoramaAPI\AfricanArtoramaAPI.csproj", "{F0739E1C-6563-4757-9C7E-4D3668D6389F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AfricanArtorama.Database", "AfricanArtorama.Database\AfricanArtorama.Database.csproj", "{7388BE2A-F23D-4D1A-B81D-A8383D701DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfricanArtorama.DatabaseFramework", "AfricanArtorama.DatabaseFramework\AfricanArtorama.DatabaseFramework.csproj", "{FE078542-4211-4DD1-BE60-0703C9405D3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfricanArtoramaAPI.Framework", "AfricanArtoramaAPI.Framework\AfricanArtoramaAPI.Framework.csproj", "{9D13F3B8-BB98-4B8C-9948-5D7606A4D31C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4CD2653B-99F4-4D95-8B75-BBCDB309E24A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,25 @@ Global
 		{F0739E1C-6563-4757-9C7E-4D3668D6389F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0739E1C-6563-4757-9C7E-4D3668D6389F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0739E1C-6563-4757-9C7E-4D3668D6389F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7388BE2A-F23D-4D1A-B81D-A8383D701DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7388BE2A-F23D-4D1A-B81D-A8383D701DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7388BE2A-F23D-4D1A-B81D-A8383D701DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7388BE2A-F23D-4D1A-B81D-A8383D701DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE078542-4211-4DD1-BE60-0703C9405D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE078542-4211-4DD1-BE60-0703C9405D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE078542-4211-4DD1-BE60-0703C9405D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE078542-4211-4DD1-BE60-0703C9405D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D13F3B8-BB98-4B8C-9948-5D7606A4D31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D13F3B8-BB98-4B8C-9948-5D7606A4D31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D13F3B8-BB98-4B8C-9948-5D7606A4D31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D13F3B8-BB98-4B8C-9948-5D7606A4D31C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0739E1C-6563-4757-9C7E-4D3668D6389F} = {4CD2653B-99F4-4D95-8B75-BBCDB309E24A}
+		{7388BE2A-F23D-4D1A-B81D-A8383D701DCB} = {4CD2653B-99F4-4D95-8B75-BBCDB309E24A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1299E66-3C90-4B19-AA37-34503856AAA4}

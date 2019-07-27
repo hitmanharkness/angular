@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AfricanArtorama.Database;
+using AfricanArtorama.Database.Models;
 using AfricanArtoramaAPI.BusinessLogic.DTOs;
-using AfricanArtoramaAPI.BusinessLogic.Models;
 using AfricanArtoramaAPI.BusinessLogic.Repository;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,7 @@ namespace AfricanArtoramaAPI.Controllers
         [HttpGet]
         public IEnumerable<Art> Get()
         {
-            return new MainArtRepository().GetArt();
+            return new MainArtRepository(ContextCreator.GetArtoramaContext()).GetArt();
         }
 
         // GET api/values/5
@@ -32,7 +33,7 @@ namespace AfricanArtoramaAPI.Controllers
         [HttpPost]
         public void Post([FromBody] ArtUploadDTO artDTO)
         {
-            new MainArtRepository().SaveArt(artDTO);
+            new MainArtRepository(ContextCreator.GetArtoramaContext()).SaveArt(artDTO);
         }
 
         // PUT api/values/5

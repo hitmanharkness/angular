@@ -1,0 +1,9 @@
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\bin\Debug\netstandard2.0\AfricanArtorama.Database.deps.json
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\bin\Debug\netstandard2.0\AfricanArtorama.Database.dll
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\bin\Debug\netstandard2.0\AfricanArtorama.Database.pdb
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.csprojAssemblyReference.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.csproj.CoreCompileInputs.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.AssemblyInfoInputs.cache
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.AssemblyInfo.cs
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.dll
+C:\Users\mkdet\Source\Repos\hitmanharkness\angular\API-Server\AfricanArtoramaAPI\AfricanArtorama.Database\obj\Debug\netstandard2.0\AfricanArtorama.Database.pdb

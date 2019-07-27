@@ -1,5 +1,7 @@
-﻿using AfricanArtoramaAPI.BusinessLogic.DTOs;
-using AfricanArtoramaAPI.BusinessLogic.Models;
+﻿using AfricanArtorama.Database;
+using AfricanArtorama.Database.Models;
+using AfricanArtoramaAPI.BusinessLogic.DTOs;
+using AfricanArtoramaAPI.BusinessLogic.EFRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,28 +11,36 @@ namespace AfricanArtoramaAPI.BusinessLogic.Repository
 {
     public class MainArtRepository
     {
+        private ArtoramaDBContext _context;
+
+        public MainArtRepository(ArtoramaDBContext context)
+        {
+            _context = context;
+        }
+
         public IEnumerable<Art> GetArt()
         {
-            var imageRepo = new ArtImagesRepository();
-            var art = new ArtRepository().Get();
-            foreach(var piece in art)
-            {
-                if (!string.IsNullOrWhiteSpace(piece.ImageId))
-                {
-                    piece.Image = imageRepo.Get(piece.ImageId);
-                }
-            }
+            //var imageRepo = new ArtImagesRepository();
+            var art = new ArtRepository(_context).Get();
+            //foreach(var piece in art)
+            //{
+            //    if (!string.IsNullOrWhiteSpace(piece.ImageId))
+            //    {
+            //        piece.Image = imageRepo.Get(piece.ImageId);
+            //    }
+            //}
 
             return art;
         }
 
         public void SaveArt(ArtUploadDTO artDTO)
         {
-            var artImageId = new ArtImagesRepository().Save(artDTO.photo.image);
-
-            var artId = new ArtRepository().Insert(new Art(artDTO, artImageId));
+            var artImageLocatoin = string.Empty;
+            //new ArtImagesRepository().Save(artDTO.photo.image);
+            //
+            var artId = new ArtRepository(_context).Insert(artDTO.ToArt(artImageLocatoin));
             
-            new ArtDetailsRepository().Insert(new ArtDetails(artDTO, artId));
+            new ArtDetailRepository(_context).Insert(artDTO.ToArtDetail(artId));
         }
     }
 }

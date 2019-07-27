@@ -18,10 +18,10 @@ namespace AfricanArtoramaAPI.BusinessLogic.Models
         public string Subject { get; set; }
         public string Description { get; set; }
         public int Depth { get; set; }
-        public string[] Keywords { get; set; }
-        public string[] Materials { get; set; }
-        public string[] Mediums { get; set; }
-        public string[] Styles { get; set; }
+        public string Keywords { get; set; }
+        public string Materials { get; set; }
+        public string Mediums { get; set; }
+        public string Styles { get; set; }
         public bool IsFramed { get; set; }
         public bool IsMultiPaned { get; set; }
         public string PackageStyle { get; set; }
@@ -39,10 +39,10 @@ namespace AfricanArtoramaAPI.BusinessLogic.Models
             Subject = artDTO.category.subject;
             Description = artDTO.info.description;
             Depth = artDTO.info.depth;
-            Keywords = artDTO.materials.keywords;
-            Materials = artDTO.materials.materials;
-            Mediums = artDTO.materials.mediums;
-            Styles = artDTO.materials.styles;
+            Keywords = artDTO.materials.keywords.ToStringObject();
+            Materials = artDTO.materials.materials.ToStringObject();
+            Mediums = artDTO.materials.mediums.ToStringObject();
+            Styles = artDTO.materials.styles.ToStringObject();
             IsFramed = artDTO.packaging.isFramed.ToBool();
             IsMultiPaned = artDTO.packaging.isMultiPaned.ToBool();
             PackageStyle = artDTO.packaging.packageStyle;

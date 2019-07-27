@@ -1,0 +1,159 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\AfricanArtorama.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\AfricanArtorama.Database.csproj",
+        "projectName": "AfricanArtorama.Database",
+        "projectPath": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\AfricanArtorama.Database.csproj",
+        "packagesPath": "C:\\Users\\mkdet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mkdet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj",
+        "projectName": "AfricanArtoramaAPI",
+        "projectPath": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\AfricanArtoramaAPI.csproj",
+        "packagesPath": "C:\\Users\\mkdet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mkdet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\AfricanArtorama.Database.csproj": {
+                "projectPath": "C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtorama.Database\\AfricanArtorama.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.0.2105168, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "MongoDB.Driver.GridFS": {
+              "target": "Package",
+              "version": "[2.7.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,7 @@ export class UploadPictureComponent {
   imageChangedEvent: any = '';
   croppedImage: any = '';
   imageExists: boolean = !!this.croppedImage;
+  fileName: string;
 
   constructor(private _store: Store<any>, private router: Router) {
     let photoInfo;
@@ -48,6 +49,8 @@ export class UploadPictureComponent {
 
   fileChangeEvent(event: any): void {
       this.imageChangedEvent = event;
+      const fullImagePathSplit = event.srcElement.value.split(/\/|\\/);
+      this.fileName = fullImagePathSplit[fullImagePathSplit.length - 1];
   }
   imageCropped(event: ImageCroppedEvent) {
       this.croppedImage = event.base64;
@@ -61,7 +64,8 @@ export class UploadPictureComponent {
   }
 
   next() {
-    this._store.dispatch({ type: SET_PHOTO, payload: { image: this.croppedImage, saveEvent: this.imageChangedEvent } });
+    this._store.dispatch({ type: SET_PHOTO, payload: { image: this.croppedImage, saveEvent: this.imageChangedEvent
+                                                      , fileName: this.fileName } });
     this.router.navigate(['uploadArt/artInfo']);
   }
 }

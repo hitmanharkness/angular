@@ -1,3 +1,4 @@
 export class ServiceHelper {
-    endpoint = 'https://localhost:44348/api/';
+    //endpoint = 'http://localhost:65222/api/';
+    endpoint = 'https://africanartoramaapiframework20190725030223.azurewebsites.net/api/';
 }

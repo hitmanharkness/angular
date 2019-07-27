@@ -31,7 +31,7 @@ export class PricingComponent {
     this.shippingCost = 60;
     this.priceGroup.valueChanges.subscribe(val => {
       const price = this.priceGroup.get('artistPrice').value * 1;
-      this.artistProfit = price * 0.65;
+      this.artistProfit = this.round(price * 0.65);
       this.buyerPrice = price + this.shippingCost;
     });
 
@@ -42,6 +42,10 @@ export class PricingComponent {
         artistPrice: pricing.artistPrice
       });
     }
+  }
+
+  round(number) {
+    return Math.round((number + 0.00001) * 100) / 100;
   }
 
   saveValues() {

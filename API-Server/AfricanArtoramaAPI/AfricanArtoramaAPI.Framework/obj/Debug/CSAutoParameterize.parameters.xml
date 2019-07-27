@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ArtConnectionString-Web.config Connection String" description="ArtConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=LAPTOP-L1K0JLN8;Initial Catalog=Artorama;User ID=ArtUser;Password=rampage11" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\mkdet\\Source\\Repos\\hitmanharkness\\angular\\API-Server\\AfricanArtoramaAPI\\AfricanArtoramaAPI\.Framework\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ArtConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
